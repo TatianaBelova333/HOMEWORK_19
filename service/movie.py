@@ -5,8 +5,8 @@ class MovieService:
     def __init__(self, dao: MovieDAO):
         self.dao = dao
 
-    def get_one(self, bid):
-        return self.dao.get_one(bid)
+    def get_one(self, mid):
+        return self.dao.get_one(mid)
 
     def get_all(self, filters):
         if filters.get("director_id") is not None:
@@ -26,5 +26,5 @@ class MovieService:
         self.dao.update(movie_d)
         return self.dao
 
-    def delete(self, rid):
-        self.dao.delete(rid)
+    def delete(self, mid):
+        self.dao.delete(mid)
